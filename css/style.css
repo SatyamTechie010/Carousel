@@ -1,0 +1,28 @@
+.card-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  .card-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .card {
+    flex: 0 0 33.333%;
+    margin-right: 15px;
+  }
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
