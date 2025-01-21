@@ -1,28 +1,83 @@
 .card-slider {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-  }
-  .card-container {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  .card {
-    flex: 0 0 33.333%;
-    margin-right: 15px;
-  }
-  .slider-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
-  .slider-controls button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 0 0 33.333%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card.active img {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.card:not(.active) {
+  opacity: 0.5;
+  transform: scale(0.9);
+  z-index: 1;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-controls button {
+ background: none;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.btn {
+  max-width: max-content;
+  max-width: 200px;
+  position: absolute;
+  bottom: 1vh;
+ border-radius: 23px;
+}
+.a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.slider-controls img{
+  width: 75px;
+  background: none;
+  position: relative;
+  top: 5vh;
+}
